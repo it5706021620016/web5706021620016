@@ -1,26 +1,44 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>ประวัติส่วนตัว</title>
   </head>
-  <body>
-    <form method="get" action="profile1.php">
-      <table  align ="center" width="600">
+  <body bgcolor="#8B1A1A">
+    <form method="post" action="profile1.php">
+      <table  valign ="center" align ="center" width="550" bgcolor="white">
         <tr>
           <td colspan="4" align="center">
-            <big>  ประวัติส่วนตัว</big>
+            <big>  ประวัติส่วนตัว</big><br><br>
             </td>
           </tr>
+
           <tr>
-            <td > ชื่อ : </td>
-            <td> <input type="text" name="name" size="15" value=""/></td>
-            <td> นามสกุล : </td>
-            <td> <input type="text" name="lname" size="15" value=""/></td>
+            <td > คำนำหน้า : </td>
+            <td>
+            <select name="prefix">
+              <option value="ด.ช.">ด.ช.</option>
+              <option value="ด.ช.">ด.ญ.</option>
+              <option value="นาย" selected>นาย</option>
+              <option value="น.ส."> น.ส.</option>
+              <option value="นาง" >นาง</option>
+            </td>
           </tr>
+
+            <tr>
+              <td>ชื่อ-นามสกุล : </td>
+            <td> <input type="text" name="name" size="15" value=""/>
+            <input type="text" name="lname" size="15" value=""/></td>
+          </tr>
+
+          <tr>
+            <td > ชื่อเล่น : </td>
+            <td colspan="3"> <input type="text" name="nname" size="10" value=""/></td>
+          </tr>
+
           <tr>
             <td > รหัสนักศึกษา : </td>
             <td> <input type="text" name="id" size="13" value=""/></td>
+          </tr>
 
             <tr>
               <td>  ระดับการศึกษา : </td>
@@ -30,88 +48,112 @@
               </td>
             </tr>
 
+          </tr>
 
-          </tr>
-          <tr>
-            <td > ชื่อเล่น : </td>
-            <td colspan="3"> <input type="text" name="nname" size="10" value=""/></td>
-          </tr>
           <tr>
             <td> เพศ : </td>
-            <td colspan="3">  <input type ="radio" name= "sex" value=" ชาย "/>ชาย
+            <td colspan="3">  <input type ="radio" name= "sex" value=" ชาย "  checked />ชาย
                <input type ="radio" name= "sex" value=" หญง "/>หญิง
             </td>
           </tr>
+
+          <tr>
+            <td>วันเดือนปีเกิด</td>
+            <td bgcolor="#FFFFFF">
+              วันที่
+      <select name="bdate">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+
+        เดือน
+        <select name="bmonth">
+          <option value="มกราคม">มกราคม</option>
+          <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+          <option value="มีนาคม">มีนาคม</option>
+          <option value="เมษายน">เมษายน</option>
+          <option value="พฤษภาคม">พฤษภาคม</option>
+          <option value="มิถุนายน">มิถุนายน</option>
+          <option value="กรกฎาคม">กรกฎาคม</option>
+          <option value="สิงหาคม">สิงหาคม</option>
+          <option value="กันยายน">กันยายน</option>
+          <option value="ตุลาคม">ตุลาคม </option>
+          <option value="พฤศจิกายน">พฤศจิกายน </option>
+          <option value="ธันวาคม">ธันวาคม </option>
+        </select>
+
+        ปี    <input size=4 type=text name="byear" maxlength=4>(เช่น 2559)</td>
+      </tr>
+
+      <tr>
+        <td> อายุ : </td>
+        <td colspan="3"> <input type="text" name="age" size="5" value=""/>  ปี </td>
+      </tr>
+
           <tr>
             <td > อีเมลล์ : </td>
-            <td> <input type="text" name="email" size="20" value=""/></td>
+            <td> <input type="text" name="email" size="20" value=""/>
+
+              <select name="mailtype">
+                <option value="@hotmail.com"> @hotmail.com </option>
+                <option value="@hotmail.co.th"> @hotmail.co.th </option>
+                <option value="@outlook.com"> @outlook.com </option>
+                <option value="@gmail.com"> @gmail.com </option>
+                <option value="@fitm.kmutnb.ac.th"> @fitm.kmutnb.ac.th </option>
+                <option value=" "> อื่นๆ กรุณากรอก </option>
+              </td>
           </tr>
-          <tr>
-            <td> อายุ : </td>
-            <td colspan="3"> <input type="text" name="age" size="5" value=""/>  ปี </td>
-          </tr>
+
+
           <tr>
             <td> เบอร์โทร : </td>
-              <td colspan="3"> <input type="text" name="phone" size="10" value=""/> </td>
+              <td colspan="3"> <input type="text" name="phone" size="10" value=""  maxlength="10"    / > </td>
             </tr>
+
             <tr>
               <td>งานอดิเรก : </td>
                 <td> <input type="text" name="hobby" size="15" value=""/> </td>
               </tr>
 
-              <tr>
-                <td>วันเดือนปีเกิด : </td>
-                  <td> <select>
-                    <option/>1
-                    <option/>2
-                    <option/>3
-                    <option/>4
-                    <option/>5
-                    <option/>6
-                    <option/>7
-                    <option/>8
-                    <option/>9
-                    <option/>10
-                    <option/>11
-                    <option/>12
-                    <option/>13
-                    <option/>15
-                    <option/>15
-                    <option/>16
-                    <option/>17
-                    <option/>18
-                    <option/>19
-                    <option/>20
-                    <option/>21
-                    <option/>22
-                    <option/>23
-                    <option/>24
-                    <option/>25
-                    <option/>26
-                    <option/>27
-                    <option/>28
-                    <option/>29
-                    <option/>30
-                    <option/>31
-
-                    <select/> </td>
-                </tr>
-
           <tr>
             <td colspan="4" align="center">
             <input type ="submit" value=" ส่งข้อมูล "/>
             <input type ="reset" value=" ล้างข้อมูล"/>
-
           </td>
+        </tr>
 
 
-
-
-
-
-        </form>
       </table>
-
+</form>
 
   </body>
 </html>
