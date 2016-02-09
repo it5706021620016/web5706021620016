@@ -37,12 +37,14 @@
 
           <tr>
             <td > รหัสนักศึกษา : </td>
-            <td> <input type="text" name="id" size="13" value=""/></td>
+            <td> <input type="text" name="id" size="13" value="" maxlength="13"/> </td>
           </tr>
 
             <tr>
               <td>  ระดับการศึกษา : </td>
-              <td>  <input type ="radio" name= "edu" value=" ม.6 "/>ม.6
+              <td>
+                <input type ="radio" name= "edu" value=" ป.6 "/>ป.6
+                <input type ="radio" name= "edu" value=" ม.6 "/>ม.6
                 <input type ="radio" name= "edu" value=" ปวช."/"ปวส. "/>ปวช./ปวส.
                  <input type ="radio" name= "edu" value=" ปริญญาตรี "/>ปริญญาตรี
               </td>
@@ -53,7 +55,7 @@
           <tr>
             <td> เพศ : </td>
             <td colspan="3">  <input type ="radio" name= "sex" value=" ชาย "  checked />ชาย
-               <input type ="radio" name= "sex" value=" หญง "/>หญิง
+               <input type ="radio" name= "sex" value=" หญิง "/>หญิง
             </td>
           </tr>
 
@@ -111,7 +113,7 @@
           <option value="ธันวาคม">ธันวาคม </option>
         </select>
 
-        ปี    <input size=4 type=text name="byear" maxlength=4>(เช่น 2559)</td>
+        พ.ศ.    <input size=4 type=text name="byear" maxlength=4> </td>
       </tr>
 
       <tr>
@@ -121,7 +123,7 @@
 
           <tr>
             <td > อีเมลล์ : </td>
-            <td> <input type="text" name="email" size="20" value=""/>
+            <td> <input type="text" name="email" size="15" value=""/>
 
               <select name="mailtype">
                 <option value="@hotmail.com"> @hotmail.com </option>
@@ -129,7 +131,7 @@
                 <option value="@outlook.com"> @outlook.com </option>
                 <option value="@gmail.com"> @gmail.com </option>
                 <option value="@fitm.kmutnb.ac.th"> @fitm.kmutnb.ac.th </option>
-                <option value=" "> อื่นๆ กรุณากรอก </option>
+                <option value=" "> --อื่นๆ กรุณาระบุ-- </option>
               </td>
           </tr>
 
@@ -140,8 +142,20 @@
             </tr>
 
             <tr>
-              <td>งานอดิเรก : </td>
-                <td> <input type="text" name="hobby" size="15" value=""/> </td>
+              <td>งานอดิเรก/ความสนใจ :<br> <i>(เลือกได้มากกว่า 1 ข้อ)</i> </td>
+              <td>
+              <input type ="checkbox" name= "hob1" value="1"/>ดูหนัง ฟังเพลง <br>
+                <input type ="checkbox" name= "hob2" value="2"/>เล่นเกม <br>
+                 <input type ="checkbox" name= "hob3" value="3"/>อ่านหนังสือ <br>
+                  <input type ="checkbox" name= "hob4" value="4"/> เขียนโค้ด <br>
+
+                  <input type ="checkbox" name= "other" value="5"/> อื่นๆ ระบุ
+                  <input type="text" name="other2" size="15" value=""/>
+
+               </td>
+
+
+                <!--<td> <input type="text" name="hobby" size="15" value=""/> </td>-->
               </tr>
 
           <tr>
